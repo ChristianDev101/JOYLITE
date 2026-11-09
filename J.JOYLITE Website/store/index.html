@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Store | J.JOYLITE AGRO VENTURES</title>
+
+    <meta
+        name="description"
+        content="Shop food products and everyday essentials from J.JOYLITE AGRO VENTURES."
+    >
+
+    <link rel="icon" type="image/png" href="../favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="store.css">
+</head>
+
+
+<body>
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="store-navbar">
+
+    <div class="nav-container">
+
+        <a href="../index.html" class="logo">
+
+            <span class="logo-icon">
+                <i class="fa-solid fa-leaf"></i>
+            </span>
+
+            <span class="logo-text">
+                <strong>J.JOYLITE</strong>
+                <small>AGRO VENTURES</small>
+            </span>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="../index.html#about">
+                About
+            </a>
+
+            <a href="../index.html#products">
+                Products
+            </a>
+
+            <a href="index.html" class="active">
+                Store
+            </a>
+
+            <a href="../index.html#contact">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <button
+            class="cart-button"
+            id="cartButton"
+            aria-label="Open shopping cart"
+        >
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span>
+                Cart
+            </span>
+
+            <b id="cartCount">
+                0
+            </b>
+
+        </button>
+
+
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     MOBILE NAV
+========================================= -->
+
+<div class="mobile-nav" id="mobileNav">
+
+    <a href="../index.html">
+        Home
+    </a>
+
+    <a href="../index.html#about">
+        About
+    </a>
+
+    <a href="../index.html#products">
+        Products
+    </a>
+
+    <a href="index.html">
+        Store
+    </a>
+
+    <a href="../index.html#contact">
+        Contact
+    </a>
+
+</div>
+
+
+<!-- =========================================
+     STORE HERO
+========================================= -->
+
+<section class="store-hero">
+
+    <div class="hero-decoration hero-decoration-one"></div>
+    <div class="hero-decoration hero-decoration-two"></div>
+
+    <div class="store-container">
+
+        <div class="store-hero-content">
+
+            <div class="section-tag">
+                J.JOYLITE ONLINE STORE
+            </div>
+
+            <h1>
+                Shop your everyday
+                <span>food essentials.</span>
+            </h1>
+
+            <p>
+                Browse available products, check prices and stock,
+                then add what you need to your cart.
+            </p>
+
+        </div>
+
+
+        <div class="store-hero-card">
+
+            <div class="hero-card-icon">
+                <i class="fa-solid fa-basket-shopping"></i>
+            </div>
+
+            <div>
+                <span>SHOP WITH EASE</span>
+
+                <h3>
+                    Quality products,
+                    simple ordering.
+                </h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     STORE MAIN
+========================================= -->
+
+<main class="store-main">
+
+    <div class="store-container">
+
+
+        <!-- =================================
+             TOOLBAR
+        ================================== -->
+
+        <div class="store-toolbar">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search products..."
+                >
+
+            </div>
+
+
+            <div class="category-wrapper">
+
+                <label for="categoryFilter">
+                    Category
+                </label>
+
+                <select id="categoryFilter">
+
+                    <option value="all">
+                        All Products
+                    </option>
+
+                    <option value="grains">
+                        Grains & Staples
+                    </option>
+
+                    <option value="cooking">
+                        Cooking Essentials
+                    </option>
+
+                    <option value="packaged">
+                        Packaged Foods
+                    </option>
+
+                    <option value="fresh">
+                        Fresh Foods
+                    </option>
+
+                    <option value="protein">
+                        Proteins
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             STORE INFO
+        ================================== -->
+
+        <div class="store-status">
+
+            <div>
+
+                <span class="status-dot"></span>
+
+                <strong>
+                    Store open for enquiries
+                </strong>
+
+            </div>
+
+            <p id="productCount">
+                Showing products
+            </p>
+
+        </div>
+
+
+        <!-- =================================
+             PRODUCTS
+        ================================== -->
+
+        <section class="products-section">
+
+            <div
+                class="product-grid"
+                id="productGrid"
+            >
+                <!-- Products generated by JavaScript -->
+            </div>
+
+
+            <div
+                class="empty-state"
+                id="emptyState"
+            >
+
+                <div class="empty-icon">
+                    <i class="fa-solid fa-box-open"></i>
+                </div>
+
+                <h3>
+                    No products found
+                </h3>
+
+                <p>
+                    Try another search term or category.
+                </p>
+
+                <button
+                    id="clearFilters"
+                    class="clear-button"
+                >
+                    Clear Filters
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             DEMO NOTICE
+        ================================== -->
+
+        <div class="inventory-notice">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <div>
+
+                <strong>
+                    Development inventory
+                </strong>
+
+                <p>
+                    Product names, prices and stock quantities shown
+                    on this page are sample data for development.
+                    They will be replaced with J.JOYLITE's confirmed
+                    inventory before the store goes live.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- =========================================
+     CART SIDEBAR
+========================================= -->
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+
+<aside class="cart-sidebar" id="cartSidebar">
+
+    <div class="cart-header">
+
+        <div>
+
+            <span>
+                YOUR ORDER
+            </span>
+
+            <h2>
+                Shopping Cart
+            </h2>
+
+        </div>
+
+        <button
+            id="closeCart"
+            class="close-cart"
+            aria-label="Close cart"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-items"
+        id="cartItems"
+    >
+        <!-- Cart items generated by JavaScript -->
+    </div>
+
+
+    <div
+        class="empty-cart"
+        id="emptyCart"
+    >
+
+        <div class="empty-cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+        <h3>
+            Your cart is empty
+        </h3>
+
+        <p>
+            Add products to your cart to start an order.
+        </p>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>
+                Estimated Total
+            </span>
+
+            <strong id="cartTotal">
+                ₦0
+            </strong>
+
+        </div>
+
+
+        <button
+            class="whatsapp-order"
+            id="whatsappOrder"
+        >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Order via WhatsApp
+
+        </button>
+
+
+        <p class="order-note">
+            Final availability and total will be confirmed
+            by J.JOYLITE AGRO VENTURES.
+        </p>
+
+    </div>
+
+</aside>
+
+
+<!-- =========================================
+     PRODUCT MODAL
+========================================= -->
+
+<div class="product-modal-overlay" id="productModal">
+
+    <div class="product-modal">
+
+        <button
+            class="modal-close"
+            id="modalClose"
+            aria-label="Close product"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <div class="modal-image" id="modalImage">
+
+            <i id="modalIcon"></i>
+
+        </div>
+
+
+        <div class="modal-content">
+
+            <span
+                class="modal-category"
+                id="modalCategory"
+            >
+            </span>
+
+            <h2 id="modalName">
+            </h2>
+
+            <p id="modalDescription">
+            </p>
+
+
+            <div class="modal-price" id="modalPrice">
+            </div>
+
+
+            <div class="modal-stock" id="modalStock">
+            </div>
+
+
+            <div class="modal-actions">
+
+                <div class="quantity-control">
+
+                    <button id="modalMinus">
+                        −
+                    </button>
+
+                    <span id="modalQuantity">
+                        1
+                    </span>
+
+                    <button id="modalPlus">
+                        +
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="add-modal-cart"
+                    id="modalAddCart"
+                >
+
+                    <i class="fa-solid fa-cart-plus"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="store-footer">
+
+    <div class="footer-container">
+
+        <div>
+
+            <a href="../index.html" class="logo footer-logo">
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </span>
+
+                <span class="logo-text">
+                    <strong>J.JOYLITE</strong>
+                    <small>AGRO VENTURES</small>
+                </span>
+
+            </a>
+
+            <p>
+                Quality food products for everyday living.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Store
+            </h4>
+
+            <a href="index.html">
+                All Products
+            </a>
+
+            <a href="../index.html#contact">
+                Contact Us
+            </a>
+
+            <a href="https://wa.me/2348121212588" target="_blank">
+                WhatsApp
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Contact
+            </h4>
+
+            <a href="tel:07030476254">
+                07030476254
+            </a>
+
+            <a href="mailto:amehjoy835@gmail.com">
+                amehjoy835@gmail.com
+            </a>
+
+            <p>
+                12B Bello Street,<br>
+                Orunkole Phase 2
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © <span id="year"></span>
+            J.JOYLITE AGRO VENTURES.
+            All rights reserved.
+        </p>
+
+        <p>
+            Development store
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="store.js"></script>
+
+</body>
+</html>
